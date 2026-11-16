@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Prototype | GASline</title>
+<meta name="description" content="Our GASline prototype: app screens, who it is for and everything inside the app.">
+<meta name="theme-color" content="#1B1B1B">
+<link rel="icon" href="images/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-map" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><polyline points="22 4 12 14 9 11"/></symbol>
+  <symbol id="i-warning" viewBox="0 0 24 24"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M12 14l4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+  <symbol id="i-offline" viewBox="0 0 24 24"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.7 11.1A11 11 0 0 1 19 12.6"/><path d="M5 12.6a11 11 0 0 1 5.2-2.4"/><path d="M10.7 5.1A16 16 0 0 1 22.6 9"/><path d="M1.4 9a16 16 0 0 1 4.7-2.9"/><path d="M8.5 16.1a6 6 0 0 1 7 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-navigation" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><line x1="7" y1="7" x2="7.01" y2="7"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></symbol>
+  <symbol id="i-package" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+</svg>
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="GASline home"><img src="images/logo-dark.png" alt="GASline" width="705" height="178"></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open or close the menu">
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span class="lines"></span></label>
+    <nav class="mainnav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="prototype.html" aria-current="page">Our Prototype</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="downloads/gasline.apk" download="GASline.apk">Download<span class="long"> for Android</span></a>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <img src="images/icon.png" alt="" width="72" height="72">
+    <h1>Our Prototype</h1>
+    <p>See what is inside the app.</p>
+  </div>
+</section>
+
+<section class="band-white" aria-labelledby="screens-h">
+  <div class="wrap">
+    <h2 id="screens-h">Inside the app</h2>
+    <ul class="gallery">
+      <li><div class="phone"><img src="images/screen-map.jpg" alt="Map of nearby fuel stations" width="480" height="1019" loading="lazy"></div><span>Station map</span></li>
+      <li><div class="phone"><img src="images/screen-station.jpg" alt="Station page with prices and open status" width="480" height="1019" loading="lazy"></div><span>Station page</span></li>
+      <li><div class="phone"><img src="images/screen-range.jpg" alt="Range check with a Get directions button" width="480" height="1019" loading="lazy"></div><span>Range check</span></li>
+      <li><div class="phone"><img src="images/screen-trips.jpg" alt="Trip planner with a fuel cost calculator" width="540" height="1142" loading="lazy"></div><span>Trip planner</span></li>
+      <li><div class="phone"><img src="images/screen-roles.jpg" alt="Choose how you move: traveler, delivery rider, tricycle driver or regular driver" width="540" height="1126" loading="lazy"></div><span>Choose your role</span></li>
+      <li><div class="phone"><img src="images/screen-language.jpg" alt="Choose your language: English, Tagalog or Bisaya-Cebuano" width="540" height="1126" loading="lazy"></div><span>Choose your language</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band-cream" aria-labelledby="roles-h">
+  <div class="wrap">
+    <h2 id="roles-h">Who it is for</h2>
+    <p class="section-lead">Pick your role when you start.</p>
+    <ul class="roles reveal">
+      <li><svg class="ico" aria-hidden="true"><use href="#i-compass"/></svg><h3>Traveler / Tourist</h3><p>Plan your trip fuel cost.</p></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-package"/></svg><h3>Delivery Rider</h3><p>Track daily earnings and fuel costs.</p></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><h3>Tricycle / Public Driver</h3><p>Track daily earnings and boundary fees.</p></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-navigation"/></svg><h3>Regular Driver</h3><p>Find stations and check your range.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band-white" aria-labelledby="all-h">
+  <div class="wrap">
+    <h2 id="all-h">Everything in the app</h2>
+    <ul class="goals reveal">
+      <li><svg class="ico" aria-hidden="true"><use href="#i-map"/></svg><h3>Map and directions</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg><h3>Pump-photo prices</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><h3>Open or closed</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-warning"/></svg><h3>Quality alerts</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-gauge"/></svg><h3>Range check</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-offline"/></svg><h3>Offline mode</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-calc"/></svg><h3>Trip and route fuel cost</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg><h3>Fuel log</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-briefcase"/></svg><h3>Boundary tracker</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><h3>Favorites</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-mic"/></svg><h3>Voice search</h3></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg><h3>English, Tagalog, Bisaya</h3></li>
+    </ul>
+  </div>
+</section>
+<section class="band-cream" aria-labelledby="plus-h">
+  <div class="wrap split reveal">
+    <div>
+      <p class="badge">Coming soon</p>
+      <h2 id="plus-h">GASline Plus</h2>
+      <ul class="chips" aria-label="GASline Plus reports">
+        <li><svg class="ico-s" aria-hidden="true"><use href="#i-book"/></svg>Weekly totals</li>
+        <li><svg class="ico-s" aria-hidden="true"><use href="#i-gauge"/></svg>Daily average</li>
+        <li><svg class="ico-s" aria-hidden="true"><use href="#i-star"/></svg>Best day</li>
+      </ul>
+      <p class="price"><b>&#8369;99</b> per month</p>
+      <p class="note">An automatic income and profit report. Shown as a demo in the app today.</p>
+    </div>
+    <div class="phone"><img src="images/screen-tracker.jpg" alt="Boundary tracker showing profit today, with the GASline Plus report below" width="540" height="1142" loading="lazy"></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy Notice</a>
+      <a href="mailto:gasline.dnsc@gmail.com">gasline.dnsc@gmail.com</a>
+      <a href="https://www.facebook.com/profile.php?id=61595876085878" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+    <p>Built in Panabo City, Davao del Norte</p>
+    <p>Davao del Norte State College (DNSC), Institute of Computing</p>
+    <p>GASline v1.0.0 &middot; Released Oct 29, 2026</p>
+    <p>Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a></p>
+  </div>
+</footer>
+</body>
+</html>
