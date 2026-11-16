@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<!-- GASline | Home page | Team Premium, DNSC -->
 <html lang="en">
 <head>
+<!-- Page settings: title, description, icon, shared stylesheet -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GASline: Find the right fuel station in Panabo</title>
@@ -10,7 +12,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Skip link: lets keyboard users jump to the content -->
 <a class="skip" href="#main">Skip to content</a>
+<!-- Icon sprite: reuse an icon with use href="#i-name" -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="i-map" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></symbol>
   <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
@@ -19,11 +23,14 @@
   <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M12 14l4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
   <symbol id="i-offline" viewBox="0 0 24 24"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.7 11.1A11 11 0 0 1 19 12.6"/><path d="M5 12.6a11 11 0 0 1 5.2-2.4"/><path d="M10.7 5.1A16 16 0 0 1 22.6 9"/><path d="M1.4 9a16 16 0 0 1 4.7-2.9"/><path d="M8.5 16.1a6 6 0 0 1 7 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></symbol>
 </svg>
+<!-- Top bar: logo, menu, Download button -->
 <header class="topbar">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="GASline home"><img src="images/logo-dark.png" alt="GASline" width="705" height="178"></a>
+    <!-- Menu toggle: hidden checkbox, no JavaScript -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open or close the menu">
     <label for="nav-toggle" class="burger" aria-hidden="true"><span class="lines"></span></label>
+    <!-- Main menu: aria-current marks the active page -->
     <nav class="mainnav" aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About Us</a>
@@ -33,13 +40,16 @@
     <a class="btn btn-primary" href="downloads/gasline.apk" download="GASline.apk">Download<span class="long"> for Android</span></a>
   </div>
 </header>
+<!-- Main content -->
 <main id="main">
+<!-- Hero: tagline, headline, feature chips, screenshots -->
 <section class="hero" id="top">
   <div class="wrap">
     <div>
       <p class="tagline">Fuel smarter. Move with confidence.</p>
       <h1>Find the right fuel station in Panabo.</h1>
       <p class="lead">Stations, prices, open status and quality alerts in one app.</p>
+      <!-- Feature chips -->
       <ul class="chips" aria-label="Main features">
         <li><svg class="ico-s" aria-hidden="true"><use href="#i-map"/></svg>Map</li>
         <li><svg class="ico-s" aria-hidden="true"><use href="#i-camera"/></svg>Prices</li>
@@ -58,9 +68,11 @@
     </div>
   </div>
 </section>
+<!-- Promo video -->
 <section class="band-white" aria-labelledby="video-h">
   <div class="wrap">
     <h2 id="video-h">See GASline in action</h2>
+    <!-- Video player: file is video/gasline-promo.mp4 -->
     <div class="video-wrap reveal">
       <video controls preload="metadata" playsinline poster="images/video-poster.jpg" width="1920" height="1080">
         <source src="video/gasline-promo.mp4" type="video/mp4">
@@ -70,10 +82,12 @@
   </div>
 </section>
 
+<!-- Why we built it: sourced stats -->
 <section class="band-dark" id="problem" aria-labelledby="problem-h">
   <div class="wrap">
     <h2 id="problem-h">Why we built it</h2>
     <p class="section-lead">What drivers in the Davao Region faced in 2026.</p>
+    <!-- Stat cards, each with its source -->
     <ul class="stats reveal">
       <li><span class="stat-num">6 of 16</span><p>of the station closures reported in the Davao Region since Mar 9, 2026 were in Davao del Norte.</p><span class="stat-src">SunStar Davao</span></li>
       <li><span class="stat-num">₱17.50–₱24.25</span><p>diesel price hike per liter in one day, March 10, 2026.</p><span class="stat-src">SunStar Davao, citing DOE data</span></li>
@@ -83,9 +97,11 @@
   </div>
 </section>
 
+<!-- What GASline does -->
 <section class="band-white" id="features" aria-labelledby="features-h">
   <div class="wrap">
     <h2 id="features-h">What GASline does</h2>
+    <!-- Feature cards -->
     <ul class="features reveal">
       <li><svg class="ico" aria-hidden="true"><use href="#i-map"/></svg><h3>Map</h3><p>Find nearby stations, with route and arrival time.</p></li>
       <li><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg><h3>Prices with pump photos</h3><p>Reported by drivers, with a photo and a time.</p></li>
@@ -98,9 +114,11 @@
   </div>
 </section>
 
+<!-- How it works -->
 <section class="band-cream" id="how-it-works" aria-labelledby="how-h">
   <div class="wrap">
     <h2 id="how-h">How it works</h2>
+    <!-- 3-step flow with screenshots -->
     <ol class="flow">
       <li><div class="phone"><img src="images/screen-map.jpg" alt="Map of nearby fuel stations" width="480" height="1019" loading="lazy"></div><span class="n">1</span><h3>Find stations</h3><p>Open the map.</p></li>
       <li><div class="phone"><img src="images/screen-station.jpg" alt="Station page with prices and open status" width="480" height="1019" loading="lazy"></div><span class="n">2</span><h3>Check prices and status</h3><p>Driver reports, each with a time.</p></li>
@@ -109,19 +127,23 @@
   </div>
 </section>
 
+<!-- Install in 3 steps -->
 <section class="band-white" id="install" aria-labelledby="install-h">
   <div class="wrap">
     <h2 id="install-h">Install in 3 steps</h2>
+    <!-- Install steps -->
     <ol class="steps">
       <li><span class="n">1</span>Download the file.</li>
       <li><span class="n">2</span>If Android asks, allow "Install unknown apps" for your browser.</li>
       <li><span class="n">3</span>Open GASline.</li>
     </ol>
+    <!-- Download button: APK is downloads/gasline.apk -->
     <a class="btn btn-primary" href="downloads/gasline.apk" download="GASline.apk">Download for Android</a>
     <p class="note">Android only for now. iPhone version coming soon.</p>
   </div>
 </section>
 </main>
+<!-- Footer: links, credits, version -->
 <footer class="footer">
   <div class="wrap">
     <nav aria-label="Footer">

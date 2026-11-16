@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<!-- GASline | About Us page | Team Premium, DNSC -->
 <html lang="en">
 <head>
+<!-- Page settings: title, description, icon, shared stylesheet -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Us | GASline</title>
@@ -10,7 +12,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Skip link: lets keyboard users jump to the content -->
 <a class="skip" href="#main">Skip to content</a>
+<!-- Icon sprite: reuse an icon with use href="#i-name" -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
@@ -20,11 +24,14 @@
   <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
   <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M12 14l4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
 </svg>
+<!-- Top bar: logo, menu, Download button -->
 <header class="topbar">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="GASline home"><img src="images/logo-dark.png" alt="GASline" width="705" height="178"></a>
+    <!-- Menu toggle: hidden checkbox, no JavaScript -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open or close the menu">
     <label for="nav-toggle" class="burger" aria-hidden="true"><span class="lines"></span></label>
+    <!-- Main menu: aria-current marks the active page -->
     <nav class="mainnav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="about.html" aria-current="page">About Us</a>
@@ -35,7 +42,9 @@
   </div>
 </header>
 
+<!-- Main content -->
 <main id="main">
+<!-- Page banner -->
 <section class="page-hero">
   <div class="wrap">
     <img src="images/icon.png" alt="" width="72" height="72">
@@ -44,6 +53,7 @@
   </div>
 </section>
 
+<!-- Our story -->
 <section class="band-white" aria-labelledby="story-h">
   <div class="wrap split reveal">
     <div>
@@ -55,9 +65,11 @@
   </div>
 </section>
 
+<!-- Drivers helping drivers -->
 <section class="band-cream" aria-labelledby="community-h">
   <div class="wrap">
     <h2 id="community-h">Drivers helping drivers</h2>
+    <!-- Community flow diagram -->
     <ol class="community reveal">
       <li><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg><h3>One driver reports</h3><p>A price, with a pump photo.</p></li>
       <li><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg><h3>Others see it</h3><p>With the time of the report.</p></li>
@@ -66,9 +78,11 @@
   </div>
 </section>
 
+<!-- Mission and vision -->
 <section class="band-dark" aria-labelledby="mv-h">
   <div class="wrap">
     <h2 id="mv-h">What drives us</h2>
+    <!-- Mission and vision cards -->
     <div class="mv reveal">
       <article>
         <svg class="ico" aria-hidden="true"><use href="#i-target"/></svg>
@@ -84,9 +98,11 @@
   </div>
 </section>
 
+<!-- Objectives -->
 <section class="band-white" aria-labelledby="goals-h">
   <div class="wrap">
     <h2 id="goals-h">Our objectives</h2>
+    <!-- Objective tiles -->
     <ul class="goals reveal">
       <li><svg class="ico" aria-hidden="true"><use href="#i-navigation"/></svg><h3>Find stations fast</h3></li>
       <li><svg class="ico" aria-hidden="true"><use href="#i-tag"/></svg><h3>See driver-reported prices</h3></li>
@@ -96,9 +112,11 @@
   </div>
 </section>
 
+<!-- Team Premium -->
 <section class="band-cream" aria-labelledby="team-h">
   <div class="wrap">
     <h2 id="team-h">Team Premium</h2>
+    <!-- Team cards: initials, full name, role -->
     <ul class="team reveal">
       <li><span class="avatar" aria-hidden="true">KN</span><span class="team-name">Kurt Bob D. Nipales</span><abbr class="team-role" title="Chief Executive Officer">CEO</abbr></li>
       <li><span class="avatar" aria-hidden="true">CB</span><span class="team-name">Cristene Joy C. Baldapan</span><abbr class="team-role" title="Chief Marketing Officer">CMO</abbr></li>
@@ -108,6 +126,7 @@
 </section>
 </main>
 
+<!-- Footer: links, credits, version -->
 <footer class="footer">
   <div class="wrap">
     <nav aria-label="Footer">

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<!-- GASline | Contact page | Team Premium, DNSC -->
 <html lang="en">
 <head>
+<!-- Page settings: title, description, icon, shared stylesheet -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact Us | GASline</title>
@@ -10,7 +12,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Skip link: lets keyboard users jump to the content -->
 <a class="skip" href="#main">Skip to content</a>
+<!-- Icon sprite: reuse an icon with use href="#i-name" -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="i-map" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></symbol>
   <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
@@ -35,11 +39,14 @@
   <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
 </svg>
+<!-- Top bar: logo, menu, Download button -->
 <header class="topbar">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="GASline home"><img src="images/logo-dark.png" alt="GASline" width="705" height="178"></a>
+    <!-- Menu toggle: hidden checkbox, no JavaScript -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open or close the menu">
     <label for="nav-toggle" class="burger" aria-hidden="true"><span class="lines"></span></label>
+    <!-- Main menu: aria-current marks the active page -->
     <nav class="mainnav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -50,7 +57,9 @@
   </div>
 </header>
 
+<!-- Main content -->
 <main id="main">
+<!-- Page banner -->
 <section class="page-hero">
   <div class="wrap">
     <img src="images/icon.png" alt="" width="72" height="72">
@@ -59,10 +68,12 @@
   </div>
 </section>
 
+<!-- Contact details and message form -->
 <section class="band-cream" aria-labelledby="reach-h">
   <div class="wrap contact">
     <div>
       <h2 id="reach-h">Reach us</h2>
+      <!-- Contact cards -->
       <ul class="reach">
         <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><div><span>Email</span><a href="mailto:gasline.dnsc@gmail.com">gasline.dnsc@gmail.com</a></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-facebook"/></svg><div><span>Facebook</span><a href="https://www.facebook.com/profile.php?id=61595876085878" target="_blank" rel="noopener">GASline on Facebook</a></div></li>
@@ -71,8 +82,10 @@
     </div>
     <div>
       <h2 id="form-h">Send a message</h2>
+      <!-- Message form: posts to Formspree -->
       <form class="form" action="https://formspree.io/f/xnpdpzar" method="POST" aria-labelledby="form-h">
         <input type="hidden" name="_subject" value="New message from the GASline website">
+        <!-- Spam trap: hidden field, must stay empty -->
         <p class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
         <label for="f-name">Name</label>
         <input id="f-name" name="name" type="text" autocomplete="name" maxlength="80" required>
@@ -94,6 +107,7 @@
 </section>
 </main>
 
+<!-- Footer: links, credits, version -->
 <footer class="footer">
   <div class="wrap">
     <nav aria-label="Footer">
